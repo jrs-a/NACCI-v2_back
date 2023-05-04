@@ -13,7 +13,7 @@ app.use((req, res, next) => {
     console.log(req.path, req.method)
     next()
 })
--app.use(ex[ress.urlencoded({ extended: false})]);
+// -app.use(ex[ress.urlencoded({ extended: false})]);
 app.use(
     cors ({
         origin: ['http://localhost:3000', 
