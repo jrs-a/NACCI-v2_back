@@ -14,12 +14,12 @@ app.use((req, res, next) => {
     next()
 })
 // -app.use(ex[ress.urlencoded({ extended: false})]);
-app.use(
-    cors ({
-        origin: ['http://localhost:3000', 
-                'https://philecotourism.onrender.com'],
-    })
-)
+// app.use(
+//     cors ({
+//         origin: ['http://localhost:3000', 
+//                 'https://philecotourism.onrender.com'],
+//     })
+// )
 
 // routes
 app.use('/api/activities', activityRoutes)
