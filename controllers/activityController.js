@@ -29,7 +29,7 @@ const getActivity = async(req, res) => {
 
 // create new activity
 const createActivity = async (req, res) => {
-    const {title, body} = req.body
+    const {title, body, coverurl} = req.body
 
     let emptyFields = []
 
@@ -38,6 +38,9 @@ const createActivity = async (req, res) => {
     }
     if (!body) {
         emptyFields.push('body')
+    }
+    if (!coverurl) {
+        emptyFields.push('coverurl')
     }
     if (emptyFields.length > 0) {
         return res.status(400).json({ error: 'Please fill in all fields', emptyFields })

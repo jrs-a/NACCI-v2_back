@@ -1,5 +1,7 @@
 // Email: admin@nacci.org
 // Password: Admin@123
+// Email: hello@mail.com
+// Password: Hello123!
 
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')

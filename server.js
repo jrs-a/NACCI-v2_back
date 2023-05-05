@@ -45,14 +45,15 @@ app.use((req, res, next) => {
     next()
 })
 
-// routes REQUIRED!
-app.use('/api/activities', activityRoutes)
-app.use('/api/reservations', reservationRoutes)
-app.use('/api/user', userRoutes)
-
 // avoid CORS and any POST or OPTIONS error
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
  })
+
+ // routes REQUIRED!
+app.use('/api/activities', activityRoutes)
+app.use('/api/reservations', reservationRoutes)
+app.use('/api/user', userRoutes)
+

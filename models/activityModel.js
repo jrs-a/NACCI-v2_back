@@ -10,6 +10,9 @@ const activitySchema = new Schema({
     body: {
         type: String,
         required: true
+    },
+    coverurl: {
+        type: String
     }
 }, { timestamps: true })
 
