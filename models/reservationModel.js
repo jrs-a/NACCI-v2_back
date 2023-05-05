@@ -11,10 +11,10 @@ const reservationSchema = new Schema({
         type: String,
         required: true
     },
-    date: {
-        type: Date,
-        required: true
-    },
+    // date: {
+    //     type: Date,
+    //     required: true
+    // },
     noOfParticipants: {
         type: Number,
         required: true

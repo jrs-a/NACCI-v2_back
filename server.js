@@ -3,6 +3,8 @@ require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const activityRoutes = require('./routes/activities')
+const userRoutes = require('./routes/user')
+const reservationRoutes = require('./routes/reservations')
 
 // express app
 const app = express()
@@ -43,6 +45,8 @@ app.use((req, res, next) => {
     next()
 })
 
-// routes
+// routes REQUIRED!
 app.use('/api/activities', activityRoutes)
+app.use('/api/reservations', reservationRoutes)
+app.use('/api/user', userRoutes)
 
